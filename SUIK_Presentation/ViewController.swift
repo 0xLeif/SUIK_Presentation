@@ -28,29 +28,17 @@ class ViewController: UIViewController {
                     }
                     Later.main {
                         contractView.clear().embed {
-                            VStack(alignment: .center) {
-                                [
-                                    Label.title1(presentation[value].title),
-                                    Label(presentation[value].type.rawValue),
-                                    Spacer(),
-                                    presentation[value].imageURL.map {
-                                        LoadingImage(URL(string: $0))
-                                            .contentMode(.scaleAspectFit)
-                                        .frame(width: 256)
-                                    }
-                                ]
-                            }
+                            SlideView(slide: presentation[value])
                         }
                     }
             }
         }
         
-        view.embed(withPadding: 32) {
+        view.embed(withPadding: 8) {
             SafeAreaView {
                 VStack {
                     [
                         contractView,
-                        Spacer(),
                         HStack {
                             [
                                 Button("Prev Slide") { [weak self] in

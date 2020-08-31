@@ -5,9 +5,9 @@
         "package": "Later",
         "repositoryURL": "https://github.com/0xLeif/Later",
         "state": {
-          "branch": "develop",
-          "revision": "395eebd0787713f0212a33cfdaca5177c237a3af",
-          "version": null
+          "branch": null,
+          "revision": "cb567dd0038faec639bb709afa14c52c3cc13ffa",
+          "version": "0.3.1"
         }
       },
       {
@@ -23,9 +23,9 @@
         "package": "SwiftUIKit",
         "repositoryURL": "https://github.com/0xLeif/SwiftUIKit",
         "state": {
-          "branch": "bug/promise-resign",
-          "revision": "1aa8f2b4e3b5ac68838fce5c6f0810151fa52be7",
-          "version": null
+          "branch": null,
+          "revision": "e7332f8842d395e4fbe97b27d3ca3533246c5bc2",
+          "version": "2.0.1"
         }
       }
     ]

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B75F5624FD78B0007214E5 /* SlidePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B75F5524FD78B0007214E5 /* SlidePointsView.swift */; };
 		296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */; };
 		296D8DAE24FAAD6A00319CA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */; };
 		296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAF24FAAD6A00319CA3 /* ViewController.swift */; };
@@ -15,10 +16,11 @@
 		296D8DB824FAAD6B00319CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB624FAAD6B00319CA3 /* LaunchScreen.storyboard */; };
 		296D8DC124FAAD9200319CA3 /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 296D8DC024FAAD9200319CA3 /* SwiftUIKit */; };
 		296D8DC524FABA9300319CA3 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC424FABA9300319CA3 /* Slide.swift */; };
-		296D8DC724FABC5A00319CA3 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC624FABC5A00319CA3 /* SlideViewController.swift */; };
+		296D8DC724FABC5A00319CA3 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC624FABC5A00319CA3 /* SlideView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B75F5524FD78B0007214E5 /* SlidePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePointsView.swift; sourceTree = "<group>"; };
 		296D8DA824FAAD6A00319CA3 /* SUIK_Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUIK_Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +31,7 @@
 		296D8DB924FAAD6B00319CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296D8DC224FAADDB00319CA3 /* SUIK_Presentation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SUIK_Presentation.entitlements; sourceTree = "<group>"; };
 		296D8DC424FABA9300319CA3 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
-		296D8DC624FABC5A00319CA3 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideViewController.swift; path = SUIK_Presentation/SlideViewController.swift; sourceTree = SOURCE_ROOT; };
+		296D8DC624FABC5A00319CA3 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideView.swift; path = SUIK_Presentation/Views/SlideView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00B75F5424FD73D9007214E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				296D8DC624FABC5A00319CA3 /* SlideView.swift */,
+				00B75F5524FD78B0007214E5 /* SlidePointsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		296D8D9F24FAAD6A00319CA3 = {
 			isa = PBXGroup;
 			children = (
@@ -63,11 +74,11 @@
 		296D8DAA24FAAD6A00319CA3 /* SUIK_Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				00B75F5424FD73D9007214E5 /* Views */,
 				296D8DC324FABA8100319CA3 /* Models */,
 				296D8DC224FAADDB00319CA3 /* SUIK_Presentation.entitlements */,
 				296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */,
 				296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */,
-				296D8DC624FABC5A00319CA3 /* SlideViewController.swift */,
 				296D8DAF24FAAD6A00319CA3 /* ViewController.swift */,
 				296D8DB124FAAD6A00319CA3 /* Main.storyboard */,
 				296D8DB424FAAD6B00319CA3 /* Assets.xcassets */,
@@ -163,7 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */,
-				296D8DC724FABC5A00319CA3 /* SlideViewController.swift in Sources */,
+				00B75F5624FD78B0007214E5 /* SlidePointsView.swift in Sources */,
+				296D8DC724FABC5A00319CA3 /* SlideView.swift in Sources */,
 				296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */,
 				296D8DAE24FAAD6A00319CA3 /* SceneDelegate.swift in Sources */,
 				296D8DC524FABA9300319CA3 /* Slide.swift in Sources */,
@@ -374,8 +386,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/0xLeif/SwiftUIKit";
 			requirement = {
-				branch = "bug/promise-resign";
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
