@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		296D8DB324FAAD6A00319CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB124FAAD6A00319CA3 /* Main.storyboard */; };
 		296D8DB524FAAD6B00319CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB424FAAD6B00319CA3 /* Assets.xcassets */; };
 		296D8DB824FAAD6B00319CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB624FAAD6B00319CA3 /* LaunchScreen.storyboard */; };
+		296D8DC124FAAD9200319CA3 /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 296D8DC024FAAD9200319CA3 /* SwiftUIKit */; };
+		296D8DC524FABA9300319CA3 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC424FABA9300319CA3 /* Slide.swift */; };
+		296D8DC724FABC5A00319CA3 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC624FABC5A00319CA3 /* SlideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		296D8DB424FAAD6B00319CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296D8DB724FAAD6B00319CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		296D8DB924FAAD6B00319CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		296D8DC224FAADDB00319CA3 /* SUIK_Presentation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SUIK_Presentation.entitlements; sourceTree = "<group>"; };
+		296D8DC424FABA9300319CA3 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		296D8DC624FABC5A00319CA3 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideViewController.swift; path = SUIK_Presentation/SlideViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296D8DC124FAAD9200319CA3 /* SwiftUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +63,11 @@
 		296D8DAA24FAAD6A00319CA3 /* SUIK_Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				296D8DC324FABA8100319CA3 /* Models */,
+				296D8DC224FAADDB00319CA3 /* SUIK_Presentation.entitlements */,
 				296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */,
 				296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */,
+				296D8DC624FABC5A00319CA3 /* SlideViewController.swift */,
 				296D8DAF24FAAD6A00319CA3 /* ViewController.swift */,
 				296D8DB124FAAD6A00319CA3 /* Main.storyboard */,
 				296D8DB424FAAD6B00319CA3 /* Assets.xcassets */,
@@ -65,6 +75,14 @@
 				296D8DB924FAAD6B00319CA3 /* Info.plist */,
 			);
 			path = SUIK_Presentation;
+			sourceTree = "<group>";
+		};
+		296D8DC324FABA8100319CA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				296D8DC424FABA9300319CA3 /* Slide.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +101,9 @@
 			dependencies = (
 			);
 			name = SUIK_Presentation;
+			packageProductDependencies = (
+				296D8DC024FAAD9200319CA3 /* SwiftUIKit */,
+			);
 			productName = SUIK_Presentation;
 			productReference = 296D8DA824FAAD6A00319CA3 /* SUIK_Presentation.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 296D8D9F24FAAD6A00319CA3;
+			packageReferences = (
+				296D8DBF24FAAD9200319CA3 /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
+			);
 			productRefGroup = 296D8DA924FAAD6A00319CA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */,
+				296D8DC724FABC5A00319CA3 /* SlideViewController.swift in Sources */,
 				296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */,
 				296D8DAE24FAAD6A00319CA3 /* SceneDelegate.swift in Sources */,
+				296D8DC524FABA9300319CA3 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SUIK_Presentation/SUIK_Presentation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8M8SAX62V2;
 				INFOPLIST_FILE = SUIK_Presentation/Info.plist;
@@ -293,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ol.SUIK-Presentation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SUIK_Presentation/SUIK_Presentation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8M8SAX62V2;
 				INFOPLIST_FILE = SUIK_Presentation/Info.plist;
@@ -311,6 +340,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ol.SUIK-Presentation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		296D8DBF24FAAD9200319CA3 /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xLeif/SwiftUIKit";
+			requirement = {
+				branch = "bug/promise-resign";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		296D8DC024FAAD9200319CA3 /* SwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 296D8DBF24FAAD9200319CA3 /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
+			productName = SwiftUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 296D8DA024FAAD6A00319CA3 /* Project object */;
 }
