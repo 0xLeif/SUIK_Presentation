@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUIKit
+import Later
 
 class SlideView: UIView {
     let slide: Slide
@@ -26,30 +27,33 @@ class SlideView: UIView {
                             Label(slide.type.rawValue)
                         ]
                     },
-                    ScrollView {
-                        VStack {
-                            [
-                                slide.imageURL.map {
-                                    LoadingImage(URL(string: $0))
-                                        .contentMode(.scaleAspectFit)
-                                        .frame(height: 256)
+                    UIView.later { later in
+                        later.main(withDelay: 1) {
+                            ScrollView {
+                                VStack {
+                                    [
+                                        slide.imageURL.map {
+                                            LoadingImage(URL(string: $0))
+                                                .contentMode(.scaleAspectFit)
+                                                .frame(height: 256)
+                                        }
+                                        
+                                        ]
+                                        +
+                                        slide.points.map {
+                                            SlidePointsView(point: $0)
+                                        }
+                                        +
+                                        [
+                                            Spacer()
+                                    ]
                                 }
-                                
-                                ]
-                                +
-                                slide.points.map {
-                                    SlidePointsView(point: $0)
-                                }
-                                +
-                                [
-                                    Spacer()
-                            ]
+                                .frame(width: Float(self.bounds.width))
+                            }
                         }
-                        .frame(width: Float(UIScreen.main.bounds.width - 32))
                     }
                 ]
             }
-            
         }
     }
     
