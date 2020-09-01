@@ -13,32 +13,6 @@ import Later
 class ClosureSlideView: UIView {
     let slide: Slide
     
-    var pointsView: UIView {
-        let stack = VStack {
-                slide.points.map {
-                    SlidePointsView(point: $0)
-                }
-                +
-                [
-                    Spacer()
-            ]
-        }
-        
-        let scrollView = ScrollView {
-            stack
-        }
-        
-        return UIView {
-            scrollView
-        }
-        .configure { parentView in
-            NSLayoutConstraint.activate([
-                stack.leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
-                stack.trailingAnchor.constraint(equalTo: parentView.trailingAnchor)
-            ])
-        }
-    }
-    
     init(slide: Slide) {
         self.slide = slide
         
@@ -53,7 +27,7 @@ class ClosureSlideView: UIView {
                             Label(slide.type.rawValue)
                         ]
                     },
-                    pointsView
+                    ScrollableSlidePointsView(slide: slide)
                 ]
             }
         }

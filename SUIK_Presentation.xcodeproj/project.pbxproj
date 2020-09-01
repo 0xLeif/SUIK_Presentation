@@ -20,6 +20,7 @@
 		29A4299724FDF15F00082153 /* IntroSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299624FDF15F00082153 /* IntroSlideView.swift */; };
 		29A4299A24FDF3D100082153 /* ExampleSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299924FDF3D100082153 /* ExampleSlideView.swift */; };
 		29A4299C24FDF67900082153 /* ClosureSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299B24FDF67900082153 /* ClosureSlideView.swift */; };
+		29A4299E24FDF83300082153 /* ScrollableSlidePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299D24FDF83300082153 /* ScrollableSlidePointsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		29A4299624FDF15F00082153 /* IntroSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSlideView.swift; sourceTree = "<group>"; };
 		29A4299924FDF3D100082153 /* ExampleSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSlideView.swift; sourceTree = "<group>"; };
 		29A4299B24FDF67900082153 /* ClosureSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureSlideView.swift; sourceTree = "<group>"; };
+		29A4299D24FDF83300082153 /* ScrollableSlidePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableSlidePointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				29A4299824FDF1CC00082153 /* SlideView */,
 				00B75F5524FD78B0007214E5 /* SlidePointsView.swift */,
+				29A4299D24FDF83300082153 /* ScrollableSlidePointsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				29A4299A24FDF3D100082153 /* ExampleSlideView.swift in Sources */,
 				296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */,
 				00B75F5624FD78B0007214E5 /* SlidePointsView.swift in Sources */,
+				29A4299E24FDF83300082153 /* ScrollableSlidePointsView.swift in Sources */,
 				296D8DC724FABC5A00319CA3 /* DetailSlideView.swift in Sources */,
 				296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */,
 				29A4299C24FDF67900082153 /* ClosureSlideView.swift in Sources */,
