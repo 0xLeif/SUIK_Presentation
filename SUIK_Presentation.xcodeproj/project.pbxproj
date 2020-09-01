@@ -16,7 +16,10 @@
 		296D8DB824FAAD6B00319CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB624FAAD6B00319CA3 /* LaunchScreen.storyboard */; };
 		296D8DC124FAAD9200319CA3 /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 296D8DC024FAAD9200319CA3 /* SwiftUIKit */; };
 		296D8DC524FABA9300319CA3 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC424FABA9300319CA3 /* Slide.swift */; };
-		296D8DC724FABC5A00319CA3 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC624FABC5A00319CA3 /* SlideView.swift */; };
+		296D8DC724FABC5A00319CA3 /* DetailSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DC624FABC5A00319CA3 /* DetailSlideView.swift */; };
+		29A4299724FDF15F00082153 /* IntroSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299624FDF15F00082153 /* IntroSlideView.swift */; };
+		29A4299A24FDF3D100082153 /* ExampleSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299924FDF3D100082153 /* ExampleSlideView.swift */; };
+		29A4299C24FDF67900082153 /* ClosureSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4299B24FDF67900082153 /* ClosureSlideView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		296D8DB924FAAD6B00319CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		296D8DC224FAADDB00319CA3 /* SUIK_Presentation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SUIK_Presentation.entitlements; sourceTree = "<group>"; };
 		296D8DC424FABA9300319CA3 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
-		296D8DC624FABC5A00319CA3 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideView.swift; path = SUIK_Presentation/Views/SlideView.swift; sourceTree = SOURCE_ROOT; };
+		296D8DC624FABC5A00319CA3 /* DetailSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailSlideView.swift; path = SUIK_Presentation/Views/SlideView/DetailSlideView.swift; sourceTree = SOURCE_ROOT; };
+		29A4299624FDF15F00082153 /* IntroSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSlideView.swift; sourceTree = "<group>"; };
+		29A4299924FDF3D100082153 /* ExampleSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSlideView.swift; sourceTree = "<group>"; };
+		29A4299B24FDF67900082153 /* ClosureSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureSlideView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +55,7 @@
 		00B75F5424FD73D9007214E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				296D8DC624FABC5A00319CA3 /* SlideView.swift */,
+				29A4299824FDF1CC00082153 /* SlideView */,
 				00B75F5524FD78B0007214E5 /* SlidePointsView.swift */,
 			);
 			path = Views;
@@ -94,6 +100,17 @@
 				296D8DC424FABA9300319CA3 /* Slide.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		29A4299824FDF1CC00082153 /* SlideView */ = {
+			isa = PBXGroup;
+			children = (
+				29A4299624FDF15F00082153 /* IntroSlideView.swift */,
+				296D8DC624FABC5A00319CA3 /* DetailSlideView.swift */,
+				29A4299924FDF3D100082153 /* ExampleSlideView.swift */,
+				29A4299B24FDF67900082153 /* ClosureSlideView.swift */,
+			);
+			path = SlideView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A4299724FDF15F00082153 /* IntroSlideView.swift in Sources */,
+				29A4299A24FDF3D100082153 /* ExampleSlideView.swift in Sources */,
 				296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */,
 				00B75F5624FD78B0007214E5 /* SlidePointsView.swift in Sources */,
-				296D8DC724FABC5A00319CA3 /* SlideView.swift in Sources */,
+				296D8DC724FABC5A00319CA3 /* DetailSlideView.swift in Sources */,
 				296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */,
+				29A4299C24FDF67900082153 /* ClosureSlideView.swift in Sources */,
 				296D8DAE24FAAD6A00319CA3 /* SceneDelegate.swift in Sources */,
 				296D8DC524FABA9300319CA3 /* Slide.swift in Sources */,
 			);

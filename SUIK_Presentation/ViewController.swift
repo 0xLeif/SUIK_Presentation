@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                     }
                     Later.main {
                         contractView.clear().embed {
-                            SlideView(slide: presentation[value])
+                            presentation[value].view
                         }
                     }
             }
