@@ -11,16 +11,12 @@ import SwiftUIKit
 
 class ScrollableSlidePointsView: UIView {
     
-    init(slide: Slide) {
+    init(slide: Slide, withView view: UIView? = nil) {
         super.init(frame: .zero)
+        
         let stack = VStack {
             [
-                slide.imageURL.map {
-                    LoadingImage(URL(string: $0))
-                        .contentMode(.scaleAspectFit)
-                        .frame(height: 256)
-                }
-                
+                view
                 ]
                 +
                 slide.points.map {
@@ -37,15 +33,14 @@ class ScrollableSlidePointsView: UIView {
         }
         
         embed {
-            UIView {
-                scrollView
-            }
-            .configure { parentView in
-                NSLayoutConstraint.activate([
-                    stack.leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
-                    stack.trailingAnchor.constraint(equalTo: parentView.trailingAnchor)
-                ])
-            }
+            scrollView
+            
+        }
+        .configure { parentView in
+            NSLayoutConstraint.activate([
+                stack.leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
+                stack.trailingAnchor.constraint(equalTo: parentView.trailingAnchor)
+            ])
         }
     }
     

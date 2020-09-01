@@ -11,28 +11,27 @@ import SwiftUIKit
 import Later
 
 class ViewController: UIViewController {
-    var contractView: ContractView<UIView, Int>?
+    var contractView: ContractView<UIView, Int> = ContractView(view: UIView()) { contractView in
+        Contract(initialValue: 0)
+            .onChange { (value) in
+                guard let value = value,
+                    (0 ..< presentation.count) ~= value else {
+                        return
+                }
+                Later.main {
+                    contractView.clear().embed {
+                        presentation[value].view
+                    }
+                }
+        }
+    }
+    
     var currentIndex: Int {
-        contractView?.contract?.value ?? 0
+        contractView.contract?.value ?? 0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        contractView = ContractView(view: UIView()) { contractView in
-            Contract(initialValue: 0)
-                .onChange { (value) in
-                    guard let value = value,
-                        (0 ..< presentation.count) ~= value else {
-                            return
-                    }
-                    Later.main {
-                        contractView.clear().embed {
-                            presentation[value].view
-                        }
-                    }
-            }
-        }
         
         view.embed(withPadding: 8) {
             SafeAreaView {
@@ -62,6 +61,6 @@ class ViewController: UIViewController {
             return
         }
         
-        self.contractView?.contract?.value? = index
+        self.contractView.contract?.value? = index
     }
 }

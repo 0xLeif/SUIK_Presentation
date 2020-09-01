@@ -10,17 +10,16 @@ import UIKit
 import SwiftUIKit
 
 class SlidePointsView: UIView {
-
-   let point: Point
+    let point: Point
     
     var subPoints: UIView {
         guard point.subPoints.isEmpty else {
             return HStack {
                 [
                     Spacer(width: 32)
-                ]
-                +
-                point.subPoints.map { SlidePointsView(point: $0) }
+                    ]
+                    +
+                    point.subPoints.map { SlidePointsView(point: $0) }
             }
         }
         
@@ -45,9 +44,8 @@ class SlidePointsView: UIView {
                     },
                     
                     Label(point.text)
-                    .number(ofLines: 5),
-                    
-                   subPoints
+                        .number(ofLines: 5),
+                    subPoints
                 ]
             }
         }
@@ -56,5 +54,5 @@ class SlidePointsView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
 }

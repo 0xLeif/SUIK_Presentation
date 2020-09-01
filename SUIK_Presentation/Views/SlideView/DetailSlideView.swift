@@ -10,15 +10,13 @@ import UIKit
 import SwiftUIKit
 import Later
 
-class DetailSlideView: UIView {
+class DetailSlideView: UIView, SlideView {
     let slide: Slide
     
     init(slide: Slide) {
         self.slide = slide
         
         super.init(frame: .zero)
-        
-        
         
         embed {
             VStack {
@@ -29,7 +27,11 @@ class DetailSlideView: UIView {
                             Label(slide.type.rawValue)
                         ]
                     },
-                    ScrollableSlidePointsView(slide: slide)
+                    ScrollableSlidePointsView(slide: slide, withView: slide.imageURL.map {
+                        LoadingImage(URL(string: $0))
+                            .contentMode(.scaleAspectFit)
+                            .frame(height: 256)
+                    })
                 ]
             }
         }

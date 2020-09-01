@@ -10,15 +10,13 @@ import UIKit
 import SwiftUIKit
 import Later
 
-class ExampleSlideView: UIView {
+class ExampleSlideView: UIView, SlideView {
     let slide: Slide
     
     init(slide: Slide) {
         self.slide = slide
         
         super.init(frame: .zero)
-        
-        
         
         embed {
             HStack(distribution: .fillEqually) {

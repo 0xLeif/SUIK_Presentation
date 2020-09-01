@@ -10,21 +10,8 @@ import UIKit
 import SwiftUIKit
 import Later
 
-class IntroSlideView: UIView {
+class IntroSlideView: UIView, SlideView {
     let slide: Slide
-    
-    var imageView: UIView {
-        VStack {
-            [
-                slide.imageURL.map {
-                    LoadingImage(URL(string: $0))
-                        .contentMode(.scaleAspectFit)
-                },
-                
-                Spacer()
-            ]
-        }
-    }
     
     init(slide: Slide) {
         self.slide = slide
@@ -34,7 +21,12 @@ class IntroSlideView: UIView {
         embed {
             VStack {
                 [
-                    imageView,
+                    slide.imageURL.map {
+                        LoadingImage(URL(string: $0))
+                            .contentMode(.scaleAspectFit)
+                    },
+                    
+                    Spacer(),
                     VStack {
                         [
                             Label.title1(slide.title),

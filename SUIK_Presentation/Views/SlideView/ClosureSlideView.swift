@@ -10,7 +10,7 @@ import UIKit
 import SwiftUIKit
 import Later
 
-class ClosureSlideView: UIView {
+class ClosureSlideView: UIView, SlideView {
     let slide: Slide
     
     init(slide: Slide) {

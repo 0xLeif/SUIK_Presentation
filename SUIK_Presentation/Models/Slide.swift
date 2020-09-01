@@ -31,7 +31,7 @@ struct Slide: Codable {
 }
 
 extension Slide {
-    var view: UIView {
+    var view: SlideView {
         switch type {
         case .intro, .end:
             return IntroSlideView(slide: self)
