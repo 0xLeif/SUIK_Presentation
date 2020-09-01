@@ -25,7 +25,17 @@ class ExampleSlideView: UIView, SlideView {
                         [
                             Label.title1(slide.title),
                             Label(slide.type.rawValue),
-                            ScrollableSlidePointsView(slide: slide),
+                            VScroll {
+                                VStack {
+                                    slide.points.map {
+                                        SlidePointsView(point: $0)
+                                    }
+                                    +
+                                    [
+                                        Spacer()
+                                    ]
+                                }
+                            }
                         ]
                     },
                     slide.imageURL.map {

@@ -27,11 +27,25 @@ class DetailSlideView: UIView, SlideView {
                             Label(slide.type.rawValue)
                         ]
                     },
-                    ScrollableSlidePointsView(slide: slide, withView: slide.imageURL.map {
-                        LoadingImage(URL(string: $0))
-                            .contentMode(.scaleAspectFit)
-                            .frame(height: 256)
-                    })
+                    VScroll {
+                        VStack {
+                            [
+                                slide.imageURL.map {
+                                        LoadingImage(URL(string: $0))
+                                    .contentMode(.scaleAspectFit)
+                                    .frame(height: 256)
+                                }
+                            ]
+                            +
+                            slide.points.map {
+                                SlidePointsView(point: $0)
+                            }
+                            +
+                            [
+                                Spacer()
+                            ]
+                        }
+                    }
                 ]
             }
         }

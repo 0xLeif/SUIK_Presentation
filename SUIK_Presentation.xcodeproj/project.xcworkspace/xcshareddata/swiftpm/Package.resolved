@@ -23,9 +23,9 @@
         "package": "SwiftUIKit",
         "repositoryURL": "https://github.com/0xLeif/SwiftUIKit",
         "state": {
-          "branch": null,
-          "revision": "e7332f8842d395e4fbe97b27d3ca3533246c5bc2",
-          "version": "2.0.1"
+          "branch": "feature/scrollviews",
+          "revision": "183b8f9525a12bbc5f6cbcff74d2e759bde26c00",
+          "version": null
         }
       }
     ]

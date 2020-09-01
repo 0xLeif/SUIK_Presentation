@@ -27,7 +27,17 @@ class ClosureSlideView: UIView, SlideView {
                             Label(slide.type.rawValue)
                         ]
                     },
-                    ScrollableSlidePointsView(slide: slide)
+                    VScroll {
+                        VStack {
+                            slide.points.map {
+                                SlidePointsView(point: $0)
+                            }
+                            +
+                            [
+                                Spacer()
+                            ]
+                        }
+                    }
                 ]
             }
         }
