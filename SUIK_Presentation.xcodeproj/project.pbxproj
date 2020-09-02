@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00B75F5624FD78B0007214E5 /* SlidePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B75F5524FD78B0007214E5 /* SlidePointsView.swift */; };
+		00BA3AEA24FF1E8B003025CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BA3AE924FF1E8B003025CE /* ViewController.swift */; };
 		296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */; };
 		296D8DAE24FAAD6A00319CA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */; };
-		296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAF24FAAD6A00319CA3 /* ViewController.swift */; };
+		296D8DB024FAAD6A00319CA3 /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D8DAF24FAAD6A00319CA3 /* PresentationViewController.swift */; };
 		296D8DB324FAAD6A00319CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB124FAAD6A00319CA3 /* Main.storyboard */; };
 		296D8DB524FAAD6B00319CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB424FAAD6B00319CA3 /* Assets.xcassets */; };
 		296D8DB824FAAD6B00319CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 296D8DB624FAAD6B00319CA3 /* LaunchScreen.storyboard */; };
@@ -25,10 +26,11 @@
 
 /* Begin PBXFileReference section */
 		00B75F5524FD78B0007214E5 /* SlidePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePointsView.swift; sourceTree = "<group>"; };
+		00BA3AE924FF1E8B003025CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		296D8DA824FAAD6A00319CA3 /* SUIK_Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUIK_Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		296D8DAF24FAAD6A00319CA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		296D8DAF24FAAD6A00319CA3 /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		296D8DB224FAAD6A00319CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		296D8DB424FAAD6B00319CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		296D8DB724FAAD6B00319CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +89,8 @@
 				296D8DC224FAADDB00319CA3 /* SUIK_Presentation.entitlements */,
 				296D8DAB24FAAD6A00319CA3 /* AppDelegate.swift */,
 				296D8DAD24FAAD6A00319CA3 /* SceneDelegate.swift */,
-				296D8DAF24FAAD6A00319CA3 /* ViewController.swift */,
+				296D8DAF24FAAD6A00319CA3 /* PresentationViewController.swift */,
+				00BA3AE924FF1E8B003025CE /* ViewController.swift */,
 				296D8DB124FAAD6A00319CA3 /* Main.storyboard */,
 				296D8DB424FAAD6B00319CA3 /* Assets.xcassets */,
 				296D8DB624FAAD6B00319CA3 /* LaunchScreen.storyboard */,
@@ -196,7 +199,8 @@
 				29A4299724FDF15F00082153 /* IntroSlideView.swift in Sources */,
 				29A429A024FDFEC600082153 /* SlideView.swift in Sources */,
 				29A4299A24FDF3D100082153 /* ExampleSlideView.swift in Sources */,
-				296D8DB024FAAD6A00319CA3 /* ViewController.swift in Sources */,
+				296D8DB024FAAD6A00319CA3 /* PresentationViewController.swift in Sources */,
+				00BA3AEA24FF1E8B003025CE /* ViewController.swift in Sources */,
 				00B75F5624FD78B0007214E5 /* SlidePointsView.swift in Sources */,
 				296D8DC724FABC5A00319CA3 /* DetailSlideView.swift in Sources */,
 				296D8DAC24FAAD6A00319CA3 /* AppDelegate.swift in Sources */,
@@ -350,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8M8SAX62V2;
 				INFOPLIST_FILE = SUIK_Presentation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8M8SAX62V2;
 				INFOPLIST_FILE = SUIK_Presentation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,8 +416,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/0xLeif/SwiftUIKit";
 			requirement = {
-				branch = feature/scrollviews;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

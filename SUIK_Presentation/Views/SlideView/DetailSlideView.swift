@@ -31,18 +31,18 @@ class DetailSlideView: UIView, SlideView {
                         VStack {
                             [
                                 slide.imageURL.map {
-                                        LoadingImage(URL(string: $0))
-                                    .contentMode(.scaleAspectFit)
-                                    .frame(height: 256)
+                                    LoadingImage(URL(string: $0))
+                                        .contentMode(.scaleAspectFit)
+                                        .frame(height: 256)
                                 }
-                            ]
-                            +
-                            slide.points.map {
-                                SlidePointsView(point: $0)
-                            }
-                            +
-                            [
-                                Spacer()
+                                ]
+                                +
+                                slide.points.map {
+                                    SlidePointsView(point: $0)
+                                }
+                                +
+                                [
+                                    Spacer()
                             ]
                         }
                     }

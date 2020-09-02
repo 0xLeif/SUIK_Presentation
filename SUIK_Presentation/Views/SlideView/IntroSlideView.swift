@@ -35,6 +35,22 @@ class IntroSlideView: UIView, SlideView {
                     }
                 ]
             }
+//            .navigateSetRight(barButton: BarButton {
+//                HStack(withSpacing: 16) {
+//                    [
+//                        Button("Alert") {
+//                            Navigate.shared.alert(title: "Alert!", message: "3 seconds...", secondsToPersist: 3)
+//                        },
+//                        Button("Go") {
+//                            Navigate.shared.go(UIViewController {
+//                                UIView(backgroundColor: .white) {
+//                                    Label("Hello World")
+//                                }
+//                            }, style: .push)
+//                        }
+//                    ]
+//                }
+//            })
         }
     }
     
