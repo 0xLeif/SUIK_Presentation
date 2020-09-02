@@ -33,6 +33,7 @@ class IntroSlideView: UIView, SlideView {
                             Label(slide.type.rawValue)
                         ]
                     }
+                .frame(height: 60)
                 ]
             }
 //            .navigateSetRight(barButton: BarButton {

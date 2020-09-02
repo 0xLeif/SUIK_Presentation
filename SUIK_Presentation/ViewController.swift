@@ -19,13 +19,19 @@ class ViewController: UIViewController {
         view.embed {
             VScroll {
                 VStack {
-                    (1 ... 50).map { _ in
+                    (1 ... 100).map { _ in
                         PresentationView()
                             .frame(height: Float.random(in:  120 ... 600))
+                            .configure { $0.updateSlide(index: 0) }
                     }
                 }
-                .debug()
             }
+        }
+        
+        Navigate.shared.toast(style: .success, pinToTop: true, secondsToPersist: 5, padding: 16) {
+            Label.title1("Loaded 100 PresentationView")
+            .number(ofLines: 3)
+            .padding()
         }
     }
     
