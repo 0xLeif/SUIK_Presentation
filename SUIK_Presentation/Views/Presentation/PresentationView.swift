@@ -12,28 +12,26 @@ import Later
 
 class PresentationView: UIView {
     deinit {
+        contractView.contract?.resign()
         print(#function)
     }
     
-var contractView: ContractView<UIView, Int> = ContractView { contractView in
-    Contract(initialValue: 0)
-        .onChange { (value) in
-            print("New Value: \(String(describing: value))")
-            guard let value = value,
-                (0 ..< presentation.count) ~= value else {
-                    print("Return")
-                    return
-            }
-            print("Slide: \(presentation[value])")
-            Later.main {
-                contractView
-                    .clear()
-                    .embed {
-                        presentation[value].view
+    var contractView: ContractView<UIView, Int> = ContractView { contractView in
+        Contract(initialValue: 0)
+            .onChange { (value) in
+                guard let value = value,
+                    (0 ..< presentation.count) ~= value else {
+                        return
                 }
-            }
+                Later.main {
+                    contractView
+                        .clear()
+                        .embed {
+                            presentation[value].view
+                    }
+                }
+        }
     }
-}
     
     var currentIndex: Int {
         contractView.contract?.value ?? 0

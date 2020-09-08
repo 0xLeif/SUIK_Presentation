@@ -30,9 +30,8 @@ class DetailSlideView: UIView, SlideView {
                     VScroll {
                         VStack {
                             [
-                                slide.imageURL.map {
-                                    LoadingImage(URL(string: $0))
-                                        .contentMode(.scaleAspectFit)
+                                slide.imageURL.map { url in
+                                    UIView.load(imageURL: URL(string: url))
                                         .frame(height: 256)
                                 }
                                 ]

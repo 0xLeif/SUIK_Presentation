@@ -39,8 +39,7 @@ class ExampleSlideView: UIView, SlideView {
                         ]
                     },
                     slide.imageURL.map {
-                        LoadingImage(URL(string: $0))
-                            .contentMode(.scaleAspectFit)
+                        UIView.load(imageURL: URL(string: $0))
                     }
                 ]
             }

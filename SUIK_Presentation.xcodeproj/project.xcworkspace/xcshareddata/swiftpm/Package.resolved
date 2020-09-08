@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Object",
+        "repositoryURL": "https://github.com/0xLeif/Object",
+        "state": {
+          "branch": null,
+          "revision": "0899ea01c5e4922bd464ac533e620e45defd151c",
+          "version": "0.3.0"
+        }
+      },
+      {
         "package": "swift-nio",
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
@@ -23,9 +32,18 @@
         "package": "SwiftUIKit",
         "repositoryURL": "https://github.com/0xLeif/SwiftUIKit",
         "state": {
+          "branch": "bug/loadingImage-retain",
+          "revision": "6d531e67b70977009aa25cdba741bf6cff203128",
+          "version": null
+        }
+      },
+      {
+        "package": "UDLoader",
+        "repositoryURL": "https://github.com/0xLeif/UDLoader",
+        "state": {
           "branch": null,
-          "revision": "8ff6c4579e054309770aed7f11fa0081213c4cc9",
-          "version": "2.2.0"
+          "revision": "22b1c889e46e2e358f0802d4b76f7dff737b4d96",
+          "version": "0.1.0"
         }
       }
     ]

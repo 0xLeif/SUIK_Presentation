@@ -22,8 +22,7 @@ class IntroSlideView: UIView, SlideView {
             VStack {
                 [
                     slide.imageURL.map {
-                        LoadingImage(URL(string: $0))
-                            .contentMode(.scaleAspectFit)
+                        UIView.load(imageURL: URL(string: $0))
                     },
                     
                     Spacer(),
